@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Rock, Paper, Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="js/index.js"></script>
+</head>
+<body>
+
+  <div class="wrapper">
+    
+    <div class="scoreCard">
+      <div class="title">
+        <img src="images/logo.svg">
+      </div>
+      <div class="score">
+        <p>SCORE</p>
+        <h1>0</h1>
+      </div>
+    </div>
+
+    <div class="buttonChoices">
+      <div class=" button paper">
+        <img src="images/Paper.png" onclick="playerChoice('paper')">
+      </div>
+      <div class="button scissors">
+        <img src="images/Scissors.png" onclick="playerChoice('scissors')">
+      </div>
+      <div class="button rock">
+        <img src="images/Rock.png" onclick="playerChoice('rock')">
+      </div>
+    </div>
+  
+    <div class="comparison">
+
+      <div class="playerButton">
+        <h1>YOU PICKED</h1>
+        <div class="buttonImageContainer">
+          <img id="playerPickImage" src="/images/Paper.png">
+        </div>
+      </div>
+
+        <div class="results">
+          <div class="resultText"><h1>YOU WIN</h1></div>
+          <div class="playAgain" onclick="restartGame()">PLAY AGAIN</div>
+        </div>
+
+        <div class="houseButton">
+          <h1>THE HOUSE PICKED</h1>
+          <div class="buttonImageContainer">
+            <img id="housePickImage" src="/images/Scissors.png">
+          </div>
+        </div>
+
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.iamkianna.com/">Kianna Hendricks</a>.
+  </div>
+</body>
+</html>

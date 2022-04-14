@@ -1,0 +1,175 @@
+:root {
+    --bg-grad-1: hsl(214, 47%, 23%);
+    --bg-grad-2: hsl(237, 49%, 15%);
+}
+
+* { /*reset default padding and margins*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: radial-gradient(at top, var(--bg-grad-1), var(--bg-grad-2));
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+/************* Score Card ****************/
+.wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /*view-height*/
+    width: 100vw; /*the whole view-width*/
+}
+
+.scoreCard {
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex; /*the title div and score div are displayed side by side*/
+    height: 150px;
+    align-items: center; /*vertical alignment*/
+    justify-content: space-between; /*push the divs away from each other*/
+    margin-top: 1rem;
+    width: 700px;
+}
+
+/*Text align won't work well for the the score card */
+.title {
+    margin-left: 30px; /*matches the margin for the score*/
+}
+
+.score {
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    display: flex; /*needed to move score and 0*/
+    flex-direction: column; /*needed to move score and 0*/
+    height: 114px;
+    justify-content: center;
+    margin-right: 30px; /*matches the margin for the title/logo*/
+    width: 150px;
+}
+
+.score p {
+    color: hsl(229, 64%, 46%);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2.4px;
+    line-height: 10px;
+}
+.score h1 { /*modifies the score h1 only */
+    color: hsl(229, 25%, 31%);
+    font-size: 3.5rem;
+}
+/************* ^^Score Card^^ ****************/
+
+
+
+
+/************* Button Choices ****************/
+
+.buttonChoices {
+    background-image: url("images/triangle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap; /* after constraining box this moves rock on the next line to be able to create triangle display*/
+    height: 430px;
+    justify-content: center;
+    width: 476px;
+    margin-top: 100px;
+}
+
+.scissors {
+    margin-left: 20px;
+}
+
+.paper {
+    margin-right: 20px;
+}
+
+
+.buttonChoices .button {
+    cursor: pointer;
+    transition: all 0.25s; /*to make the transformations smoother*/
+}
+
+.buttonChoices .button:hover {
+    transform: translate3d(0px, -8px, 0px); /*goes up 8px;*/
+}
+/************* ^^Button Choices^^ ****************/
+
+/************* Results ****************/
+
+.comparison {
+    display: none;
+    margin-top: 50px;
+    width: 900px; /* because this container is bigger than the banner*/
+}
+
+.comparison > div { /* targets divs closest to comparison class div only. not the inner divs */
+    flex: 1; /*each div has equal importance and therefore should have equal widths*/
+}
+
+.comparison h1 {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+.comparison img {
+    height: 275px;
+    width: 275px;
+}
+
+.comparison .buttonImageContainer {
+    display: flex; /* to center in div */
+    justify-content: center; /* to center in div */
+}
+
+
+.results {
+    align-items: center;
+    display: flex;
+    flex-direction: column; /*vertical centering*/
+    justify-content: center; /*horizontal center*/
+}
+
+.results h1 {
+    font-size: 45px;
+}
+
+.playAgain {
+    background-color: white;
+    border-radius: 6px;
+    color: hsl(229, 25%, 31%);
+    cursor: pointer;
+    padding: 12px /*top bottom*/ 72px /*left right*/;
+    transition: all 0.15s;
+}
+
+.playAgain:hover {
+    background-color: beige;
+    transform: translate3d(0px, -2px, 0px);
+}
+
+/************* ^^Results^^ ****************/
+
+
+/************* Footer ****************/
+
+.attribution {
+    margin-top: 12px;
+    text-align: center;
+    padding-top: 4rem;
+}
+.attribution,
+.attribution a {
+    color: white;
+}
+
+/************* ^^Footer^^ ****************/
