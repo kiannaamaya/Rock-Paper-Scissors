@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="js/index.js"></script>
+  
 </head>
 <body>
 
@@ -19,7 +19,7 @@
     
     <div class="scoreCard">
       <div class="title">
-        <img src="images/logo.svg">
+        <img class="logo" src="images/logo.svg">
       </div>
       <div class="score">
         <p>SCORE</p>
@@ -29,13 +29,13 @@
 
     <div class="buttonChoices">
       <div class=" button paper">
-        <img src="images/Paper.png" onclick="playerChoice('paper')">
+        <img src="images/Paper.png" alt="Paper" onclick="playerChoice('paper')">
       </div>
       <div class="button scissors">
-        <img src="images/Scissors.png" onclick="playerChoice('scissors')">
+        <img src="images/Scissors.png" alt="Scissors"onclick="playerChoice('scissors')">
       </div>
       <div class="button rock">
-        <img src="images/Rock.png" onclick="playerChoice('rock')">
+        <img src="images/Rock.png" alt="Rock" onclick="playerChoice('rock')">
       </div>
     </div>
   
@@ -63,9 +63,22 @@
     </div>
   </div>
   
+  <button class="rulesButton">RULES</button>
+  <div class="modal">
+    <div class="modalContainer">
+      <header class="modalHeader">
+        <h2 class="modalHeading">RULES</h2>
+        <button class="closeButton">
+          <img src="/images/icon-close.svg" alt="Close button">
+        </button>
+      </header>
+      <img src="/images/image-rules.svg" alt="Rules image" class="rulesImage">
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.iamkianna.com/">Kianna Hendricks</a>.
   </div>
+  <script src="js/index.js"></script>
 </body>
 </html>

@@ -3,8 +3,12 @@ setTimeout(() => {
   }, 500);
   
 
+const buttonRules = document.querySelector(".rulesButton");
+const buttonClose = document.querySelector(".closeButton");
+const modal = document.querySelector(".modal");
 
-const buttonOptions = { //dictionary object with key/value pairing
+
+buttonOptions = { //dictionary object with key/value pairing
     "rock": "/images/Rock.png",
     "paper": "/images/Paper.png",
     "scissors": "/images/Scissors.png"
@@ -101,3 +105,11 @@ const setScore = (score) => {
 }
 
 
+//Toggle Modal 
+buttonRules.addEventListener("click", () => {
+    modal.classList.toggle("showModal");
+});
+
+buttonClose.addEventListener("click", () => {
+    modal.classList.toggle("showModal");
+});

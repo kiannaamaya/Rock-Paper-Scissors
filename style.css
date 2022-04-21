@@ -20,6 +20,10 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh; /*view-height*/
+    padding-top: 1.5rem;
+    position: relative;
+    margin: 0 auto;
+    max-width: 700px;
     width: 100vw; /*the whole view-width*/
 }
 
@@ -31,6 +35,7 @@ body {
     align-items: center; /*vertical alignment*/
     justify-content: space-between; /*push the divs away from each other*/
     margin-top: 1rem;
+    padding: 1rem 0.4rem;
     width: 700px;
 }
 
@@ -45,7 +50,7 @@ body {
     border-radius: 8px;
     display: flex; /*needed to move score and 0*/
     flex-direction: column; /*needed to move score and 0*/
-    height: 114px;
+    height: 100%;
     justify-content: center;
     margin-right: 30px; /*matches the margin for the title/logo*/
     width: 150px;
@@ -160,6 +165,75 @@ body {
 /************* ^^Results^^ ****************/
 
 
+/************* Rules****************/
+.rulesButton {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 0.8rem;
+    bottom: 2rem;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    right: 2rem;
+    outline: none;
+    padding: 0.6rem 2.4rem;
+    position: absolute;
+}
+
+/*Rules Modal */
+.modal {
+    background: #0000004d;
+    display: grid;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    place-items: center;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.3s ease-in-out;
+    width: 100%;
+}
+
+.modalContainer {
+    background: white;
+    border-radius: 1.5rem;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 100%;
+}
+
+.modalHeading {
+    color: hsl(229, 25%, 31%);
+    font-size: 1.5rem;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.rulesImage {
+    padding: 2rem 4rem;
+}
+
+.showModal { /* toggles on and off */
+    opacity: 1;
+    pointer-events: initial;
+}
+
+/************* ^^Rules^^ ****************/
+
+
+
 /************* Footer ****************/
 
 .attribution {
@@ -173,3 +247,5 @@ body {
 }
 
 /************* ^^Footer^^ ****************/
+
+
